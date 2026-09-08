@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy — BeeBase</title>
+    <meta
+        name="description"
+        content="Privacy Policy for BeeBase, a modern beekeeping management application."
+    >
+
+    <style>
+        :root {
+            --background: #f7f7f5;
+            --surface: #ffffff;
+            --surface-secondary: #f1f1ed;
+            --text: #171717;
+            --text-secondary: #686862;
+            --border: #e5e5df;
+            --accent: #e5a900;
+            --accent-dark: #bd8800;
+            --accent-soft: #fff4cc;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #11110f;
+                --surface: #1a1a17;
+                --surface-secondary: #22221e;
+                --text: #f5f5f0;
+                --text-secondary: #aaa9a0;
+                --border: #30302b;
+                --accent: #f2b90b;
+                --accent-dark: #dca500;
+                --accent-soft: #332b12;
+                --shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "SF Pro Display",
+                "SF Pro Text",
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* Header */
+
+        header {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            header {
+                background: rgba(17, 17, 15, 0.75);
+            }
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--accent);
+            color: #171717;
+            font-size: 20px;
+        }
+
+        .header-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 90px 0 70px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            margin-bottom: 22px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -0.055em;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 24px auto 0;
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        .updated {
+            margin-top: 18px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Layout */
+
+        .content-layout {
+            display: grid;
+            grid-template-columns: 230px minmax(0, 1fr);
+            gap: 55px;
+            align-items: start;
+            padding-bottom: 100px;
+        }
+
+        .toc {
+            position: sticky;
+            top: 110px;
+        }
+
+        .toc-title {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .toc a {
+            display: block;
+            padding: 7px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .toc a:hover {
+            color: var(--text);
+        }
+
+        /* Article */
+
+        .article {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: clamp(28px, 5vw, 58px);
+            box-shadow: var(--shadow);
+        }
+
+        .section {
+            scroll-margin-top: 110px;
+        }
+
+        .section + .section {
+            margin-top: 52px;
+            padding-top: 52px;
+            border-top: 1px solid var(--border);
+        }
+
+        .section h2 {
+            margin: 0 0 16px;
+            font-size: 27px;
+            line-height: 1.25;
+            letter-spacing: -0.03em;
+        }
+
+        .section h3 {
+            margin: 28px 0 10px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .section p {
+            margin: 0 0 16px;
+            color: var(--text-secondary);
+        }
+
+        .section ul {
+            margin: 12px 0 18px;
+            padding-left: 22px;
+            color: var(--text-secondary);
+        }
+
+        .section li {
+            margin: 7px 0;
+        }
+
+        .highlight {
+            margin: 22px 0;
+            padding: 18px 20px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--surface-secondary);
+        }
+
+        .highlight p {
+            margin: 0;
+        }
+
+        .contact-card {
+            margin-top: 25px;
+            padding: 22px;
+            border-radius: 18px;
+            background: var(--accent-soft);
+        }
+
+        .contact-card strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-card a {
+            color: var(--accent-dark);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 35px 0 50px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+            .container {
+                width: min(100% - 28px, 680px);
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            .header-label {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 0 45px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .content-layout {
+                display: block;
+                padding-bottom: 60px;
+            }
+
+            .toc {
+                display: none;
+            }
+
+            .article {
+                border-radius: 22px;
+                padding: 27px 22px;
+            }
+
+            .section + .section {
+                margin-top: 40px;
+                padding-top: 40px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="brand">
+            <span class="brand-icon">🐝</span>
+            <span>BeeBase</span>
+        </a>
+
+        <span class="header-label">
+            Privacy Policy
+        </span>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                🛡️ Privacy & Security
+            </div>
+
+            <h1>Privacy Policy</h1>
+
+            <p>
+                We believe your beekeeping data should remain yours.
+                This policy explains how BeeBase collects, uses, stores,
+                and protects your information.
+            </p>
+
+            <div class="updated">
+                Last updated: September 8, 2026
+            </div>
+        </div>
+    </section>
+
+    <div class="container content-layout">
+
+        <aside class="toc">
+            <div class="toc-title">Contents</div>
+
+            <a href="#information">1. Information We Collect</a>
+            <a href="#usage">2. How We Use Your Information</a>
+            <a href="#storage">3. Data Storage</a>
+            <a href="#sharing">4. Data Sharing</a>
+            <a href="#security">5. Data Security</a>
+            <a href="#retention">6. Data Retention</a>
+            <a href="#deletion">7. Account Deletion</a>
+            <a href="#children">8. Children's Privacy</a>
+            <a href="#third-party">9. Third-Party Services</a>
+            <a href="#rights">10. Your Rights</a>
+            <a href="#changes">11. Changes</a>
+            <a href="#contact">12. Contact Us</a>
+        </aside>
+
+        <article class="article">
+
+            <section class="section" id="information">
+                <h2>1. Information We Collect</h2>
+
+                <p>
+                    BeeBase is a beekeeping management application that helps
+                    users manage apiaries, hives, inspections, photos, and
+                    related beekeeping records.
+                </p>
+
+                <h3>Account Information</h3>
+
+                <p>
+                    When you create an account or sign in, we may collect:
+                </p>
+
+                <ul>
+                    <li>Email address</li>
+                    <li>Authentication and session information</li>
+                    <li>Information required to maintain your account</li>
+                </ul>
+
+                <h3>Apiary and Hive Information</h3>
+
+                <p>
+                    BeeBase allows you to create and manage beekeeping records,
+                    which may include:
+                </p>
+
+                <ul>
+                    <li>Apiary names and descriptions</li>
+                    <li>Apiary locations</li>
+                    <li>Hive information</li>
+                    <li>Hive names or identifiers</li>
+                    <li>Inspection records</li>
+                    <li>Notes and observations</li>
+                    <li>Photos attached to apiaries, hives, or inspections</li>
+                </ul>
+
+                <h3>Location Information</h3>
+
+                <p>
+                    BeeBase may request access to your device's location when
+                    you choose to use location-based features, such as
+                    determining the location of an apiary.
+                </p>
+
+                <p>
+                    BeeBase does not continuously track your location and does
+                    not use your location for advertising.
+                </p>
+
+                <h3>Photos and Camera</h3>
+
+                <p>
+                    BeeBase may request access to your device's camera and photo
+                    library when you choose to add photos to your apiaries,
+                    hives, or other records.
+                </p>
+
+                <p>
+                    Photos are used only for functionality initiated by you
+                    within the application.
+                </p>
+            </section>
+
+            <section class="section" id="usage">
+                <h2>2. How We Use Your Information</h2>
+
+                <p>
+                    We use collected information to:
+                </p>
+
+                <ul>
+                    <li>Provide and operate BeeBase</li>
+                    <li>Authenticate users and maintain sessions</li>
+                    <li>Store and synchronize your beekeeping records</li>
+                    <li>Display your apiaries, hives, inspections, and photos</li>
+                    <li>Provide location-based features when requested</li>
+                    <li>Synchronize data between your devices and our servers</li>
+                    <li>Maintain and improve application reliability and security</li>
+                    <li>Respond to support requests</li>
+                </ul>
+
+                <div class="highlight">
+                    <p>
+                        <strong>We do not sell your personal information.</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="section" id="storage">
+                <h2>3. Data Storage and Synchronization</h2>
+
+                <p>
+                    BeeBase supports offline functionality. Some application
+                    data may be temporarily stored locally on your device so
+                    that you can continue using supported features without an
+                    internet connection.
+                </p>
+
+                <p>
+                    When an internet connection becomes available, locally
+                    stored data may be synchronized with BeeBase servers.
+                </p>
+
+                <p>
+                    Data synchronization helps keep your records available
+                    across supported sessions and devices.
+                </p>
+            </section>
+
+            <section class="section" id="sharing">
+                <h2>4. Data Sharing</h2>
+
+                <p>
+                    We do not sell, rent, or trade your personal information.
+                </p>
+
+                <p>
+                    Your information may be processed by service providers
+                    necessary to operate BeeBase, such as infrastructure,
+                    hosting, storage, authentication, or other technical
+                    service providers.
+                </p>
+
+                <p>
+                    These providers may process data only as necessary to
+                    provide their services.
+                </p>
+
+                <p>
+                    We may also disclose information when required by applicable
+                    law, legal process, or when necessary to protect the rights,
+                    safety, and security of BeeBase, our users, or others.
+                </p>
+            </section>
+
+            <section class="section" id="security">
+                <h2>5. Data Security</h2>
+
+                <p>
+                    We take reasonable technical and organizational measures
+                    to protect your information against unauthorized access,
+                    alteration, disclosure, or destruction.
+                </p>
+
+                <p>
+                    However, no method of electronic storage or transmission
+                    over the internet can be guaranteed to be completely secure.
+                </p>
+            </section>
+
+            <section class="section" id="retention">
+                <h2>6. Data Retention</h2>
+
+                <p>
+                    We retain your account and associated data for as long as
+                    necessary to provide BeeBase services or until you request
+                    deletion of your account, unless we are required to retain
+                    certain information by law.
+                </p>
+
+                <p>
+                    When you delete your account, your associated data will be
+                    deleted or anonymized within a reasonable period, subject
+                    to legal or operational requirements.
+                </p>
+            </section>
+
+            <section class="section" id="deletion">
+                <h2>7. Account Deletion</h2>
+
+                <p>
+                    You can request deletion of your BeeBase account and
+                    associated data through the account deletion functionality
+                    available in the application.
+                </p>
+
+                <p>
+                    Account deletion may permanently remove your account and
+                    associated beekeeping data.
+                </p>
+
+                <div class="highlight">
+                    <p>
+                        Please make sure that you have synchronized any data
+                        you wish to keep before deleting your account.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section" id="children">
+                <h2>8. Children's Privacy</h2>
+
+                <p>
+                    BeeBase is not intended for children under the age required
+                    by applicable law to provide consent for processing of
+                    personal information.
+                </p>
+
+                <p>
+                    We do not knowingly collect personal information from
+                    children without appropriate consent.
+                </p>
+
+                <p>
+                    If you believe that a child has provided personal
+                    information to us without appropriate consent, please
+                    contact us.
+                </p>
+            </section>
+
+            <section class="section" id="third-party">
+                <h2>9. Third-Party Services</h2>
+
+                <p>
+                    BeeBase may use third-party services required for application
+                    infrastructure, authentication, data storage, analytics,
+                    crash reporting, or other technical functionality.
+                </p>
+
+                <p>
+                    These services may process information in accordance with
+                    their own privacy policies.
+                </p>
+
+                <p>
+                    Third-party services used by the application are selected
+                    and configured with the goal of protecting user information
+                    and providing the required application functionality.
+                </p>
+            </section>
+
+            <section class="section" id="rights">
+                <h2>10. Your Rights</h2>
+
+                <p>
+                    Depending on your location and applicable law, you may have
+                    rights regarding your personal information, including the
+                    right to:
+                </p>
+
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Request correction of inaccurate information</li>
+                    <li>Request deletion of your personal information</li>
+                    <li>Request restriction of certain processing</li>
+                    <li>Object to certain processing</li>
+                    <li>Request a copy of your personal information</li>
+                </ul>
+
+                <p>
+                    To exercise applicable rights, please contact us using the
+                    contact information below.
+                </p>
+            </section>
+
+            <section class="section" id="changes">
+                <h2>11. Changes to This Privacy Policy</h2>
+
+                <p>
+                    We may update this Privacy Policy from time to time.
+                </p>
+
+                <p>
+                    When changes are made, we will update the "Last updated"
+                    date at the top of this page.
+                </p>
+
+                <p>
+                    We encourage you to periodically review this Privacy Policy
+                    to stay informed about how your information is handled.
+                </p>
+            </section>
+
+            <section class="section" id="contact">
+                <h2>12. Contact Us</h2>
+
+                <p>
+                    If you have questions about this Privacy Policy or how
+                    BeeBase handles your information, please contact us.
+                </p>
+
+                <div class="contact-card">
+                    <strong>BeeBase Support</strong>
+                    <a href="mailto:YOUR_EMAIL@example.com">
+                        YOUR_EMAIL@example.com
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 BeeBase. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
